@@ -26,7 +26,7 @@ tokenizer = Tokenizer(num_words=vocab_size, oov_token=oov_tok)
 tokenizer.fit_on_texts(training_sentences)
 
 # Dicionário onde chaves são: emoção , valor
-encode_emotions = {"Neutral": 0, "Positive": 1, "Negative": 2}
+encode_emotions = {"Neutra": 0, "Positiva": 1, "Negativa": 2}
 
 sequences = tokenizer.texts_to_sequences(review)
 padded = pad_sequences(sequences, maxlen=max_length, padding=padding_type, truncating=trunc_type)
